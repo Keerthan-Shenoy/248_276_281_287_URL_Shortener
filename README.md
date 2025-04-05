@@ -57,3 +57,20 @@ minikube service url-shortener-service --url
 curl -X POST -H "Content-Type: application/json" -d '{"url": "https://www.google.com"}' http://EXTERNAL_URL/shorten
 ```
 You should receive a JSON response with a generated short URL. Navigating to that short URL should redirect you to the original long URL.
+
+## Week 3
+
+### Install metrics-serve Addon on minikube
+minikube addons enable metrics-server
+
+### Verify the installation of metrics-server
+kubectl get deployment metrics-server -n kube-system
+
+### Apply the cpu-hpa.yaml config to the deployment
+kubectl apply -f .\url-shortener-service.yaml
+
+### Check the usage of the CPU
+kubectl get hpa
+
+### Check the number of replications
+kubectl get top pods
