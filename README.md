@@ -84,3 +84,32 @@ kubectl get hpa
 ```
 kubectl get top pods
 ```
+### Run locust on terminal 
+```
+locust
+```
+### Follow the url for the Locust Web UI
+```
+http://localhost:8089/
+```
+### Add the Deployment url in the Host section on Locust 
+```
+http://127.0.0.1:54756/  #the port number may change
+```
+
+### Change the number of concurrent
+```
+example : Number of users (peak concurrency)
+          100000
+
+          Ramp up (users started/seconds)
+          1000
+```
+### Again check the usage of the CPU
+```
+kubectl get hpa
+```
+### Again check the number of replications of the containers (must have increased)
+```
+kubectl get top pods
+```
