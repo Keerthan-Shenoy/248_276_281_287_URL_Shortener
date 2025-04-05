@@ -61,16 +61,26 @@ You should receive a JSON response with a generated short URL. Navigating to tha
 ## Week 3
 
 ### Install metrics-serve Addon on minikube
+```
 minikube addons enable metrics-server
+```
 
 ### Verify the installation of metrics-server
+```
 kubectl get deployment metrics-server -n kube-system
+```
 
 ### Apply the cpu-hpa.yaml config to the deployment
+```
 kubectl apply -f .\url-shortener-service.yaml
+```
 
 ### Check the usage of the CPU
+```
 kubectl get hpa
+```
 
 ### Check the number of replications
+```
 kubectl get top pods
+```
