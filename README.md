@@ -84,8 +84,9 @@ kubectl get hpa
 ```
 kubectl get top pods
 ```
-### Run locust on terminal 
+### Install and Run locust on terminal 
 ```
+pip3 install locust
 locust
 ```
 ### Follow the url for the Locust Web UI
@@ -97,7 +98,7 @@ http://localhost:8089/
 http://127.0.0.1:54756/  #the port number may change
 ```
 
-### Change the number of concurrent
+### Change the number of concurrent users
 ```
 example : Number of users (peak concurrency)
           100000

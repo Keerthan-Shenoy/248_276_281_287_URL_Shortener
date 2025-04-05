@@ -14,10 +14,17 @@ spec:
     spec:
       containers:
         - name: url-shortener
-          image: url-shortener:latest
+          image: 248_276_281_287_url_shortener-url_shortener:latest
           imagePullPolicy: Never
           ports:
             - containerPort: 5000
           env:
             - name: REDIS_HOST
               value: "redis-service"
+          resources:              
+            requests:
+              cpu: "100m"
+              memory: "200Mi"
+            limits:
+              cpu: "500m"
+              memory: "500Mi"
