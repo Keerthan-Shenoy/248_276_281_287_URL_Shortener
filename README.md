@@ -72,7 +72,7 @@ kubectl get deployment metrics-server -n kube-system
 
 ### Apply the cpu-hpa.yaml config to the deployment
 ```
-kubectl apply -f .\url-shortener-service.yaml
+kubectl apply -f cpu-hpa.yaml
 ```
 
 ### Check the usage of the CPU
