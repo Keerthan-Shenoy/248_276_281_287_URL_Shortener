@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: url-shortener-deployment
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: url-shortener
@@ -21,6 +20,8 @@ spec:
           env:
             - name: REDIS_HOST
               value: "redis-service"
+            - name: REDIS_PORT
+              value: "6379"
           resources:              
             requests:
               cpu: "100m"
