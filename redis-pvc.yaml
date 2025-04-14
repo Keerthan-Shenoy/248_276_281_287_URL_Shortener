@@ -1,3 +1,4 @@
+# filepath: redis-pvc.yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
