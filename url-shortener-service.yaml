@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: url-shortener-service
 spec:
-  type: LoadBalancer
   selector:
     app: url-shortener
   ports:
     - protocol: TCP
       port: 80
       targetPort: 5000
+  type: NodePort
